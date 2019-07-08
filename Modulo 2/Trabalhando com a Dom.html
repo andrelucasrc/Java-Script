@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Trabalhando com a DOM</title>
+    </head>
+    <body>
+        <div id=app>
+            <input type="text" name="nome" id="Id" class="class"></input>
+            <button class="botao">Adicionar</button>
+        </div>
+        <script>
+            //Retorna um item
+            var getById = document.getElementById('Id');                //pesquisa elemento pelo ID
+            //Retorna um arranjo
+            var getByClass = document.getElementsByClassName('class');  //pesquisa elemento pela Class
+            //Retorna um item
+            var getByQuerry = document.querySelector('nome');                 //pesquisa apenas um elemento
+            var getByQuerry2 = document.querySelector('body div#app input');
+            var getByQuerry3 = document.querySelector('div#app input');
+            //Retorna um arranjo
+            var getAllByQuerry = document.querySelectorAll('input');           //pesquisa todos os elementos
+
+            console.log(getById);
+            console.log(getByClass);
+            console.log(getByQuerry);
+            console.log(getAllByQuerry);
+            //recuperar as informações do texto e do elemento.
+            var btnElement = document.querySelector('button.botao');
+            var textElement = document.querySelector('input[name=nome]');
+
+            //referenciar a função onclick dentro do body
+            btnElement.onclick = function(){
+                var text = textElement.value;   //recuperar o texto digitado
+                alert(text);                    //mostrar o texto
+            }
+        </script>
+    </body>
+</html>
