@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+            Trabalhando com Elementos
+        </title>
+    </head>
+    <body>
+        <div id="app">
+            <input id="nome" />
+        </div>
+
+        <script>
+            //Criar um novo elemento.
+            var linkElement = document.createElement('a');//O elemento criado sempre deve ser 'a'
+            //Setar os atributos de referência e titulo.
+            linkElement.setAttribute('href', 'http://www.google.com');
+            linkElement.setAttribute('title', 'Site do google');
+            //Criar um novo elemento de texo na tela.
+            var textElement = document.createTextNode('Acessar o Google');
+            //Criar um link entre o elemento da div e o elemento na tela.
+            linkElement.appendChild(textElement);
+            //Criar uma referência a div.
+            var containerElement = document.querySelector('#app');
+            //Linkar o elemento criado na div app referenciada.
+            containerElement.appendChild(linkElement);
+            //Criar uma referência ao input existente na div app
+            var inputElement = document.querySelector("#nome");
+            //Remover o input existente na div
+            inputElement.removeChild(inputElement);
+        </script>
+    </body>
+</html>
