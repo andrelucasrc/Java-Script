@@ -1,0 +1,29 @@
+<!--Crie um botão que ao ser clicado cria um novo elemento em tela com a 
+forma de um quadrado vermelho com 100px de altura e largura. Sempre que 
+o botão for clicado um novo quadrado deveaparecer na tela.-->
+<!--Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o 
+mouse por cima dealgum quadrado troque sua cor para uma cor aleatória gerada pela 
+função abaixo:
+function getRandomColor() {  
+    var letters = "0123456789ABCDEF";
+    var color = "#";  
+    for (var i = 0; i < 6; i++) {    
+        color += letters[Math.floor(Math.random() * 16)];
+    }  
+    return color;
+}
+var newColor = getRandomColor(); // #E943F0-->
+
+<html>
+    <head>
+        <title>Desafio 2</title>
+    </head>
+    <body>
+        <div id="app">
+            <button class="botão">Criar quadrado</button>
+            <div class="box"></div>
+        </div>
+        <script type="text/JavaScript" src="Desafio 2.js">
+        </script>
+    </body>
+</html>
